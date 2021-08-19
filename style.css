@@ -1,15 +1,25 @@
 
 html {
   box-sizing: border-box;
+  letter-spacing: 0.2px;
+  overflow: inherit;
+  position: relative;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+
 i {
   padding: 20px 0px;
+  margin-right: 10px;
   color: grey;
   cursor: pointer;
+}
+
+header {
+  padding: 30px 0px;
+  margin-left: 12px;
 }
 
 
@@ -29,9 +39,7 @@ body {
 
 .my-title {
   padding: 0px ;
-  
 }
-
 
 .container {
   max-width: 960px;
@@ -41,15 +49,28 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.introductions{
+  width: 500px;
+  padding-bottom: 25px;
+}
+
+.introductions h5 {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
+}
 
 .main{
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 .right {
+  flex-flow: row wrap;
   width: 70%;
   margin-left: 10px;
-
+  padding-right: 50px;
 }
 
 .left{
@@ -75,19 +96,20 @@ h1 {
 h3 {
   font-size: 18px;
   font-weight: 700;
-  line-height: 0px;
+  line-height: 20px;
+  overflow: inherit;
 }
 
 h4 {
   font-size: 13px;
   font-weight: 400;
-  color:rgb(160, 160, 160);
+  color: black;
   text-transform: uppercase;
 }
 
 h5 {
   font-style: italic;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
   color:rgb(160, 160, 160);
 }
@@ -95,169 +117,124 @@ h5 {
 p {
   font-size: 13px;
   line-height: 5px; 
-  font-weight: 300;
-  color: black;
+  font-weight: 200;
+  color: rgb(160, 160, 160);
 }
 
 ul {
   list-style-type: circle;
-  list-style-position: inside;
-  margin: 0px;
+  list-style-position: outside;
+  margin-left: 12px;
   padding: 0px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 25px;
+  font-weight: 300;
 }
+
 li .tasks {
   font-weight: 300;
 }
 
 .experince {
   padding: 15px 0px;
-  max-width: 90%;
 }
 
-/*
-
-.icon {
-  fill: currentColor;
-  display: inline-block;
-  font-size: inherit;
-  height: 1em;
-  overflow: visible;
+button {
+    padding: 15px 25px;
+    margin: 20px 0px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: none;
+    color: #00AEFF;
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 50%, #00AEFF 20%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 0.1s;
 }
 
-a {
-  color: #323232;
-  text-decoration: none;
+button:hover {
+    background-position: left;
+    color: white;
+    font-size:16px;
+    border: none;
 }
 
-a:hover {
-  text-decoration: underline;
+span {
+  margin:0px;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: 300;
 }
 
-
-
-
-section:last-child {
-  border-bottom: none;
-}
-
-.section-title {
-  font-weight: bold;
-  font-size: 18px;
-  border: 1px solid blue;
-}
-
-/***********************************
-* =Main Info
-**********************************
-
-
-
-
-.links {
-  display: flex;
-  margin: 10px 0 20px 0;
-}
-
-.link-item {
-  display: flex;
-  align-items: center;
-  flex: 1;
-}
-
-.link-item svg {
-  margin-right: 6px;
-}
-
-/***********************************
-* =Experience
-*********************************
-
-.job {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
-  border-bottom: 1px solid lightgrey;
-}
-
-.job:last-child {
-  border-bottom: none;
-}
-
-.job-title-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.job-company {
-  font-weight: bold;
-  line-height: 1.2;
-}
-
-/***********************************
-* =Skills
-*********************************
-
-.skills-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  margin-bottom: 24px;
-}
-
-.skills-container ul {
-  margin-left: 20px;
-  list-style-type: disc;
-}
-
-/***********************************
-* =Interests
-**********************************
-
-.interests-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.interests-container img {
-  height: 35px;
-  opacity: 0.75;
-}
-
-/***********************************
-* =References
-********************************
-
-.reference {
-  font-size: 18px;
-}
-
-.reference-details {
-  margin-bottom: 20px;
-}
-
-@media only screen and (max-width : 768px) {
-  section {
-    grid-template-columns: 1fr;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .container {
+    padding: 20px;
   }
 
-  .links, .job-title-container {
+  .main{
+    flex: 100%;
     flex-direction: column;
-  }
-
-  .skills-container {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .interests-container {
     flex-wrap: wrap;
-    justify-content: flex-start;
+    width: 100%;
+    height: auto;
   }
 
-  .interests-container img {
-    margin-right: 32px;
-    margin-bottom: 16px;
+  .right{
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    margin-left: 5px;
   }
+
+  .left {
+    width: 100%;
+    padding: 10px;
+    margin-left: 5px;
+    position: relative;
+  }
+
+  .introductions{
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+
+  span {
+    max-width: 200px;
+    overflow: inherit;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .my-name {
+    font-size: 30px;
+  }
+
+  .my-title {
+    font-size: 24px;
+  }
+
+  .experience {
+    max-width:100%;
+    padding-bottom: 10px;
+
+  }
+
+  h1 {
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0px;
+  }
+
+  h2 {
+    padding: 5px 0px;
+  }
+
+
 }
+
