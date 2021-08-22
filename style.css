@@ -5,23 +5,39 @@ html {
   overflow: inherit;
   position: relative;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-
 i {
-  padding: 20px 0px;
+  padding: 5px 0px;
   margin-right: 10px;
   color: grey;
   cursor: pointer;
 }
 
 header {
-  padding: 30px 0px;
+  padding: 20px 0px;
   margin-left: 12px;
 }
 
+header img{
+  border-radius: 0px;
+  padding: 0px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 120px;
+  height: 120px; 
+  display: block;
+  float: left;
+  object-fit: cover;
+}
+
+header img:hover {
+  box-shadow: 0 0 2px 1px #ade5ff;
+}
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -38,7 +54,7 @@ body {
 }
 
 .my-title {
-  padding: 0px ;
+  padding: 10px  0px;
 }
 
 .container {
@@ -52,6 +68,12 @@ body {
 .introductions{
   width: 500px;
   padding-bottom: 25px;
+  padding-top: 25px;
+  margin-left: 12px;
+}
+
+.introductions h3 {
+  padding-right: 10px;
 }
 
 .introductions h5 {
@@ -86,6 +108,16 @@ h2 {
   text-transform: uppercase;
 }
 
+.left h2 {
+
+  font-size: 14px;
+  padding: 0px;
+  color: #00AEFF;
+  font-weight: 600;
+  text-transform: uppercase;
+
+}
+
 h1 {
   font-size: 24px;
   font-weight: 500;
@@ -105,6 +137,7 @@ h4 {
   font-weight: 400;
   color: black;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 h5 {
@@ -124,7 +157,7 @@ p {
 ul {
   list-style-type: circle;
   list-style-position: outside;
-  margin-left: 12px;
+  margin-left: 14px;
   padding: 0px;
   font-size: 14px;
   line-height: 25px;
@@ -135,8 +168,16 @@ li .tasks {
   font-weight: 300;
 }
 
-.experince {
-  padding: 15px 0px;
+.experience {
+  padding: 0px;
+}
+
+.right .experience {
+  padding:5px 0px;
+}
+
+.left.experience {
+  padding: 20px 0px;
 }
 
 button {
@@ -145,23 +186,21 @@ button {
     font-size: 16px;
     letter-spacing: 1px;
     border: none;
-    color: #00AEFF;
+    color: #fff;
     cursor: pointer;
     background: linear-gradient(to left, transparent 50%, #00AEFF 20%);
     background-size: 200%;
-    background-position: right;
-    transition: background-position 0.1s;
+    background-position: left;
+    transition: background-position 0.5s;
 }
 
 button:hover {
-    background-position: left;
-    color: white;
-    font-size:16px;
-    border: none;
+    background-position: right;
+    color: #00AEFF;
 }
 
 span {
-  margin:0px;
+  margin: 0px;
   padding: 0px;
   font-size: 14px;
   font-weight: 300;
@@ -199,6 +238,16 @@ span {
     padding-bottom: 30px;
   }
 
+  header img{
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  width: 100px;
+  height: 100px; 
+  display: block;
+  float: left;
+  object-fit: cover;
+  }
 
   span {
     max-width: 200px;
@@ -217,7 +266,7 @@ span {
 
   .experience {
     max-width:100%;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 
   }
 
